@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExemploController;
 
@@ -27,5 +28,9 @@ Route::get(
     [ExemploController::class, 'sample']
 )->name('exemplo');
 
-Route::post('/criar-exemplo', [ExemploController::class, 'createSample']);
-Route::get('/listar-exemplo', [ExemploController::class, 'listSample']);
+// Route::post('/api/criar-exemplo', [ExemploController::class, 'createSample']);
+// Route::get('/api/listar-exemplo', [ExemploController::class, 'listSample']);
+
+Route::post('/api/criar-cliente', [ClientController::class, 'createClient']);
+Route::get('/api/login-cliente', [ClientController::class, 'loginClient']);
+

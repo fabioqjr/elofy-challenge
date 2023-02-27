@@ -24,7 +24,7 @@ class ExemploController extends Controller
     }
 
     public function listSample() {
-        return Exemplo::select(['name', 'description'])->get()->toJson();
+        return Exemplo::all()->toJson();
     }
 
     protected function validateRequest($request)
